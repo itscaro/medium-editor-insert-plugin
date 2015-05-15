@@ -173,7 +173,6 @@
     Images.prototype.editorSerialize = function () {
 
         var data = this._serializePreImages();
-        console.log("image-serialize", data)
 
         $.each(data, function (key) {
 

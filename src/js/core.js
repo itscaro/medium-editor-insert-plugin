@@ -134,7 +134,7 @@
 
     Core.prototype.editorSerialize = function () {
         var data = this._serialize();
-        console.log(data)
+
         $.each(data, function (key) {
             var $data = $('<div />').html(data[key].value);
 

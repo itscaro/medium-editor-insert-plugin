@@ -163,7 +163,7 @@
     Embeds.prototype.editorSerialize = function () {
 
         var data = this._serializePreEmbeds();
-        console.log('embed serialize')
+
         $.each(data, function (key) {
             var $data = $('<div />').html(data[key].value);
 

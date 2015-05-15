@@ -1,5 +1,5 @@
 /*! 
- * medium-editor-insert-plugin v1.7.4 - jQuery insert plugin for MediumEditor
+ * medium-editor-insert-plugin v1.7.5 - jQuery insert plugin for MediumEditor
  *
  * https://github.com/orthes/medium-editor-insert-plugin
  * 
@@ -918,6 +918,7 @@ this["MediumInsert"]["Templates"]["src/js/templates/images-toolbar.hbs"] = Handl
        var $embeds = this.$el.find('.medium-insert-embeds');
        var self = this;
 
+
        $embeds.each(function(){
             var html = $(this).find('.medium-insert-embed').html();
 
@@ -1004,7 +1005,6 @@ this["MediumInsert"]["Templates"]["src/js/templates/images-toolbar.hbs"] = Handl
             $data.find('.medium-insert-embeds').removeAttr('contenteditable');
             $data.find('.medium-insert-embeds-overlay').remove();
             $data.find('.medium-editor-toolbar').remove();
-            $data.find('.medium-insert-active').remove();
 
             data[key].value = $data.html();
         });
@@ -1639,6 +1639,7 @@ this["MediumInsert"]["Templates"]["src/js/templates/images-toolbar.hbs"] = Handl
      */
 
     Images.prototype.editorSerialize = function () {
+
         var data = this._serializePreImages();
 
         $.each(data, function (key) {
