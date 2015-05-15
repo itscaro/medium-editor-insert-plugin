@@ -83,6 +83,7 @@
        var $embeds = this.$el.find('.medium-insert-embeds');
        var self = this;
 
+
        $embeds.each(function(){
             var html = $(this).find('.medium-insert-embed').html();
 
@@ -162,14 +163,13 @@
     Embeds.prototype.editorSerialize = function () {
 
         var data = this._serializePreEmbeds();
-
+        console.log('embed serialize')
         $.each(data, function (key) {
             var $data = $('<div />').html(data[key].value);
 
             $data.find('.medium-insert-embeds').removeAttr('contenteditable');
             $data.find('.medium-insert-embeds-overlay').remove();
             $data.find('.medium-editor-toolbar').remove();
-            $data.find('.medium-insert-active').remove();
 
             data[key].value = $data.html();
         });
