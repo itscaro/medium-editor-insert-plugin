@@ -1,5 +1,11 @@
 <figure contenteditable="false">
-    <img src="{{img}}" alt="">
+    <picture>
+        <source media="(min-width: 480px)" srcset="{{img}}">
+        <source media="(min-width: 768px)" srcset="{{img}}">
+        <source media="(min-width: 1024px)" srcset="{{img}}">
+        <source media="(min-width: 1200px)" srcset="{{img}}">
+        <img src="{{img}}" alt="">
+    </picture>
     {{#if progress }}
         <div class="medium-insert-images-progress"></div>
     {{/if}}
